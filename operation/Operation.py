@@ -1,3 +1,9 @@
+"""
+@overview Un fichier contenant une classe permettant d'effectuer
+des opérations mathématiques.
+"""
+
+
 
 
 
@@ -40,8 +46,3 @@ class Operation:
 
         return result
     
-            
-
-
-   
-
