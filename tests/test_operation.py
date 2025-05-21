@@ -2,7 +2,7 @@
 @overview A test file
 """
 
-from operation.Operation import Operation
+from operation.operation import Operation
 
 
 
@@ -31,4 +31,4 @@ def test_factorial_negative_value():
     """
 
     fac_value = obj_op.factorial(-5)
-    assert fac_value == None, f"Expected 'None' but got {fac_value}"
+    assert fac_value is None, f"Expected 'None' but got {fac_value}"

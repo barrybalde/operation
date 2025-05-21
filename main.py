@@ -3,7 +3,7 @@
 instanciées.
 """
 
-from operation.Operation import Operation
+from operation.operation import Operation
 
 
 
