@@ -38,11 +38,10 @@ class Operation:
 
 
         # Test du paramètre en entrée
-        if (number < 0) or ( not (isinstance(number, int)) ):
+        if (number < 0) or ( not isinstance(number, int) ):
             return None
 
         for i in range(2, number + 1):
             result = result * i
 
         return result
-    
