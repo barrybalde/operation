@@ -39,7 +39,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest tests/ --maxfail=0 --disable-warnings -q
+          pytest --disable=trailing-whitespace,line-too-long tests/ --maxfail=0 --disable-warnings -q
 
       - name: Lint Python code
         run: |
