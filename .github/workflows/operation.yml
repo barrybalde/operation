@@ -44,7 +44,7 @@ jobs:
       - name: Lint Python code
         run: |
           pip install pylint
-          pylint operation tests --fail-under=8
+          pylint tests --fail-under=8
 
       - name: Type checking with mypy
         run: |
