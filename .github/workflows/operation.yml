@@ -49,5 +49,5 @@ jobs:
       - name: Type checking with mypy
         run: |
           pip install mypy
-          mypy operation
+          mypy tests
           
