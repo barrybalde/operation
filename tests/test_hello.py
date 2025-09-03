@@ -5,14 +5,14 @@ Contains basic unit test for string_hello variable.
 """
 
 
-the_string = "Hello"
+THE_STRING = "Hello"
 
 
 
 def test_hello():
     """
-    @overview Juste a `Hello` test 
+    @overview Just a `Hello` test 
     """
 
-    assert isinstance(the_string, str) is True, 'Oups, value does not a string'
+    assert isinstance(THE_STRING, str) is True, 'Oups, value does not a string'
 
