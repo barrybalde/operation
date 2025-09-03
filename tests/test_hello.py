@@ -15,4 +15,3 @@ def test_hello():
     """
 
     assert isinstance(THE_STRING, str) is True, 'Oups, value does not a string'
-
