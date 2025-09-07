@@ -39,6 +39,6 @@ class DataManipulator():
         for key_username, value_username  in self.get_data_user.items():
 
             if key_unique_username == key_username:
-                return value_username[key_value_username]
+                return value_username
 
 
