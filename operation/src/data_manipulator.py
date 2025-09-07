@@ -26,7 +26,7 @@ class DataManipulator():
 
 
 
-    def get_value_user(self, key_unique_username:str, key_value_username:str):
+    def get_info_user(self, key_unique_username:str, key_value_username:str):
         """
         @overview une méthode qui permet de retourner une valeur donnée(à partir d'une clé).
 

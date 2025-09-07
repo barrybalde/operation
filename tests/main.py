@@ -4,7 +4,7 @@ USER_DICT = {
 
     '0001': {
         'prenom': "Hawa",
-        'nom': "bah",
+        'nom': "Bah",
         "email": "barry@gmail.com",
     },
 
