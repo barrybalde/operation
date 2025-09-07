@@ -18,7 +18,4 @@ USER_DICT = {
 
 
 if __name__ == "__main__":
-
-    if('0004' == "0001"):
-
     pass
