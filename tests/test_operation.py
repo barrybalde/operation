@@ -8,7 +8,7 @@ from operation.src.data_manipulator import DataManipulator
 
 
 
-USER_DICT = {
+TEST_USER_DICT = {
 
     '0001': {
         'prenom': "Hawa",
@@ -23,7 +23,7 @@ USER_DICT = {
     }
 }
 
-OBJ_DATA_MANIPULATOR = DataManipulator(USER_DICT)
+OBJ_DATA_MANIPULATOR = DataManipulator(TEST_USER_DICT)
 
 
 
