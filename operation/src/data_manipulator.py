@@ -32,7 +32,7 @@ class DataManipulator():
 
 
 
-    def get_info_user(self, key_unique_username:str, key_value_username:str):
+    def get_info_user(self, key_unique_username:str, key_value_username:str) -> str | None:
         """
         @overview une méthode qui permet de retourner une valeur donnée(à partir d'une clé).
 
@@ -40,12 +40,14 @@ class DataManipulator():
         :param key_value_username {str} : La clé nous permettant de récupérer la valeur qu'on 
             souhaite (une donnée spécifique , ex : email).
 
-        :return {str} : La valuer à partir du paramètre 'key_value_username'
+        :return {str | None} : La valuer à partir du paramètre 'key_value_username', ou None
+        si la clé du dictionnaire de base n'existe pas.
         """
 
         for key_username, value_username in self.get_data_user.items():
 
             if  key_username == key_unique_username:
                 return value_username[key_value_username]
-
-
+            
+            else :
+                return None
