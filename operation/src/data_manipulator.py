@@ -19,6 +19,12 @@ class DataManipulator():
                 'nom': "Bah",
                 "email": "barry@gmail.com",
             },
+
+            '0002': {
+                'prenom': "Sagacity",
+                'nom': "Quantic",
+                'email': "quantic@proton.me",
+            }
         }
         """
 
@@ -31,14 +37,15 @@ class DataManipulator():
         @overview une méthode qui permet de retourner une valeur donnée(à partir d'une clé).
 
         :param key_unique_username {str} : Le username de l'utilisateur.
-        :param key_value_username {str} : La clé nous permettant de récupérer la valeur qu'on souhaite.
+        :param key_value_username {str} : La clé nous permettant de récupérer la valeur qu'on 
+            souhaite (une donnée spécifique , ex : email).
 
         :return {str} : La valuer à partir du paramètre 'key_value_username'
         """
 
-        for key_username, value_username  in self.get_data_user.items():
+        for key_username, value_username in self.get_data_user.items():
 
-            if key_unique_username == key_username:
-                return value_username
+            if  key_username == key_unique_username:
+                return value_username[key_value_username]
 
 
