@@ -38,4 +38,4 @@ def test_get_info_user():
 
     
     if hasattr(OBJ_DATA_MANIPULATOR, "get_info_user"):
-        assert OBJ_DATA_MANIPULATOR.get_info_user("0005", "email") == None, "Erreur, valeur incorrecte"
+        assert OBJ_DATA_MANIPULATOR.get_info_user("0005", "email") is None, "Erreur, valeur incorrecte"
