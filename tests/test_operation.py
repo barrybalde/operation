@@ -34,8 +34,12 @@ def test_get_info_user():
 
     #
     if hasattr(OBJ_DATA_MANIPULATOR, "get_info_user"):
-        assert OBJ_DATA_MANIPULATOR.get_info_user("0001", "email") == "barry@gmail.com", "Erreur, valeur incorrecte"
+        assert OBJ_DATA_MANIPULATOR.get_info_user("0001", "email") == "barry@gmail.com", "Erreur, l'email n'a pu être retourné."
 
-    
+    #
     if hasattr(OBJ_DATA_MANIPULATOR, "get_info_user"):
-        assert OBJ_DATA_MANIPULATOR.get_info_user("0005", "email") is None, "Erreur, valeur incorrecte"
+        assert OBJ_DATA_MANIPULATOR.get_info_user("0005", "email") is None, "Erreur, identifiant incorrect."
+
+    #
+    if hasattr(OBJ_DATA_MANIPULATOR, "get_info_user"):
+        assert OBJ_DATA_MANIPULATOR.get_info_user("0001", "ville") is None, "Erreur, la clé d'accès à la donnée de l'utilisateur est incorrecte."
