@@ -44,6 +44,11 @@ class DataManipulator():
         si la clé du dictionnaire de base n'existe pas.
         """
 
+        # Test si l'utilisateur existe
+        if self.user_exists(key_unique_username) is False:
+            return None
+        
+
         for key_username, value_username in self.get_data_user.items():
 
             if  key_username == key_unique_username:
@@ -51,3 +56,38 @@ class DataManipulator():
         
         
         return None
+    
+    
+
+    def get_user_data(self, key_unique_username: str) -> dict | None:
+        """
+        @overview Une méthode qui retourne toutes les données d'un utilisateur.
+
+        :param key_unique_username {str} : Le username unique de l'utilisateur à récupérer.
+
+        :return {dict | None} : Le dictionnaire contenant toutes les informations de l'utilisateur,
+        ou None si l'utilisateur n'existe pas.
+        """
+
+        for key_username, value_username in self.get_data_user.items():
+            if key_username == key_unique_username:
+                return value_username
+            
+        return None
+    
+
+
+    def user_exists(self, key_unique_username: str) -> bool:
+        """
+        @overview Une méthode qui vérifie si un utilisateur existe dans le dictionnaire.
+
+        :param key_unique_username {str} : Le username unique à vérifier.
+
+        :return {bool} : True si l'utilisateur existe, False sinon.
+        """
+
+        for key_username in self.get_data_user.keys():
+            if key_username == key_unique_username:
+                return True
+            
+        return False
