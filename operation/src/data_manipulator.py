@@ -5,7 +5,7 @@ class DataManipulator():
     """
     @overview Une classe permettant de manipuler des objets comme des dictionnaires.
     """
-
+    
 
     def __init__(self, data_user:dict):
         """
@@ -45,13 +45,18 @@ class DataManipulator():
         """
 
         # Test si l'utilisateur existe
-        if self.user_exists(key_unique_username) is False:
+        if self.key_exists(key_unique_username) is False:
             return None
         
 
         for key_username, value_username in self.get_data_user.items():
 
             if  key_username == key_unique_username:
+                
+                # Vérification de l'existence de la clé (ex : email)
+                if not self.key_exists(key_value_username):
+                    return None
+
                 return value_username[key_value_username]
         
         
@@ -77,17 +82,17 @@ class DataManipulator():
     
 
 
-    def user_exists(self, key_unique_username: str) -> bool:
+    def key_exists(self, key_dict: str) -> bool:
         """
-        @overview Une méthode qui vérifie si un utilisateur existe dans le dictionnaire.
+        @overview Une méthode qui vérifie si une clé existe dans un dictionnaire.
 
-        :param key_unique_username {str} : Le username unique à vérifier.
+        :param key_dict {str} : La clé du dictionnaire à vérifier.
 
-        :return {bool} : True si l'utilisateur existe, False sinon.
+        :return {bool} : True si la clé existe, False sinon.
         """
 
         for key_username in self.get_data_user.keys():
-            if key_username == key_unique_username:
+            if key_username == key_dict:
                 return True
             
         return False
